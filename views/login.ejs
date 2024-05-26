@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs")  %>
+<body class="text-center">
+  <%- include("partials/nav.ejs")  %>
+
+  <header>
+        <h1 class="p-5 bg-danger">Welcome to OnlyFansOfMovies.com</h1>
+  </header>
+
+  <figure>
+    <img src="/img/onlyfans.png" alt="OnlyFansOfMovies Logo" id="OFLogo">
+    </figure> 
+  
+        <h4 class="initialText"> Rate movies! <br> Create a list of your favorites, <br> and Share!</h4>
+  <div class="loginOrSignUpBox">
+    <h2>Login</h2>
+        <form action="/signUp">
+          <h5 id="signUp">Don't have an account?</h5>
+          <button name="register" id="signupBtn" type="submit">Sign Up </button><br>
+        </form>
+      <br>
+        <form id="loginForm" action="/loginCredentials">
+            Username:
+            <input name="username" type="text"><span id="invalidUser"></span><br>               <br>
+          
+            Password: 
+            <input  name="password" type="password"> <span id="invalidPass"></span><br>               <br>
+         
+            <button name="login" id="bigLoginBtn" type="submit">Login</button>
+        </form>
+    </div>
+
+  <% if(typeof(error) != "undefined") {%>
+    <%= error %>
+  <% } %>
+      <footer>
+        <%- include("partials/footer.ejs")  %>
+        </footer>
+          <script src="/js/loginForm.js">
+          </script>
+</body>
+</html>

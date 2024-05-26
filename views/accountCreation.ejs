@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head.ejs")  %>
+<body>
+    <h1>Confirm to create an account</h1>
+    
+  <form method="POST" action="/signupCredentials" >
+        Username:<input type="text" name="username" value ="<%= username%>">
+        <br>
+       Password:<input type="text" id="password" name="password" value="<%= password %>">
+        <br>
+        <button >Confirm</button>
+    </form>
+  
+</body>
+</html>

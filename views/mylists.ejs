@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs")  %>
+<body>
+    <%- include("partials/nav.ejs")  %>
+        
+    <h1>My Reviews</h1>
+
+				<%for(let rating of listData){%>
+					<div class="flex-container">
+					<a href="/updateRating?ratingID=<%=rating.ratingID%>" id="editLink">Edit ✎</a> <%= rating.title%> <%= rating.rating%>
+					</div>
+				<%}%>
+        <%- include("partials/footer.ejs")  %>
+</body>
+</html>

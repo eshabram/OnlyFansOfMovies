@@ -1,0 +1,196 @@
+body {
+    display: flex;
+    text-align: center;
+    margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+#navigation {
+    background-color: #333333;
+    text-align: left;
+    padding: 10px;
+}
+
+#navigation ul {
+    margin: 1px;
+    padding: 1px;
+}
+
+#navigation ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#navigation ul li a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#navigation ul li a:hover {
+    color:  #af1818;
+}
+
+#loginRef {
+    color: #af1818;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+.loginOrSignUpBox {
+  border: solid 2px #e43a3a;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-color: #e43a3a;
+}
+
+#OFLogo {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+    background-color: #ccc;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.initialText {
+  line-height: 80px;
+}
+
+#homeButton {
+  border-radius: 20px;
+  border-color: black;
+  padding: 10px;
+  width: 80px;
+  background-color: black;
+  color: white;
+}
+
+#homeButton:hover, #signupBtn:hover {
+  background-color: #af1818;
+}
+
+#homePage {
+  margin-top: 95px;
+  background-image: url("/img/popcorn-animation.gif");
+}
+
+#aboutPage {
+  background-image: url("/img/5_stars.gif");
+}
+
+#aboutPageContent {
+  color: white;
+}
+
+#siteName {
+  color: white;
+  margin-left: 1270px;
+}
+
+#signUp, #signupBtn{
+  font-size:10px;
+}
+
+#signupBtn{
+  background-color:white;
+  border-color:white;
+}
+
+#bigLoginBtn {
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+}
+
+#bigLoginBtn:hover, #bigSignUpBtn:hover {
+  background-color: #af1818;
+}
+
+#bigSignUpBtn {
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+}
+
+#startSearching {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border: solid 20px #9e2929;
+  border-radius: 20px;
+  background-color: #9e2929;
+}
+
+#editLink {
+  text-decoration: none;
+  color: #9d9b9b;
+}
+
+#editLink:hover {
+  color: dimgrey;
+}
+
+#startSearching:hover {
+  background-color: #f73636;
+}
+
+#movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    width: 500px;
+    margin:0 auto;
+}
+
+#movieInfo, #posterBox {
+    flex: 1 1 50%; 
+    padding: 10px;
+}
+
+#poster {
+    max-width: 100%;
+    height: auto;
+}
+
+.tag {
+    text-decoration: bold;
+}
+
+#thumbsUp {
+    margin:0 auto;
+}
+
+#dogImage {
+    margin:0 auto;
+    width: 60%;
+}
+
+textarea { 
+	width: 400px;
+	height: 150px;
+}
+.flexRow{
+	display:flex;
+	align-items:center;
+}
+
+#loginForm{
+  left: 80px;
+}

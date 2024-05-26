@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head.ejs")  %>
+<body>
+    <%- include("partials/nav.ejs")  %>
+        <% if(typeof(error) != "undefined") {%>
+          <span id="invalidMovie">  <%= error %></span>
+          <% } %>
+              
+    <h1>Browse</h1>
+        <form action="/searchMovies">
+            <input name="movieTitle" type="text" placeholder="Enter Movie Title">
+            <button>Search</button>
+        </form>
+        
+            <% if (typeof(movie) != "undefined") { %>
+                <% if (movie.Title !== 'Undefined') { %>
+                <form action="/rating">
+                    <input type="hidden" name="movieTitle" value="<%= movie.Title %>">
+                    <input type="hidden" name="movieYear" value="<%= movie.Year %>">
+                    <input type="hidden" name="movieGenre" value="<%= movie.Genre %>">
+                    <input type="hidden" name="movieDirector" value="<%= movie.Director %>">
+                    <input type="hidden" name="moviePlot" value="<%= movie.Plot %>">      
+                    <input type="hidden" name="moviePoster" value="<%= movie.Poster %>">      
+                    <input name="stars" type="radio" value="1" required>1
+                    <input name="stars" type="radio" value="2" required>2
+                    <input name="stars" type="radio" value="3" required>3
+                    <input name="stars" type="radio" value="4" required>4
+                    <input name="stars" type="radio" value="5" required>5<br>
+                    <textarea name="review" placeholder="Enter Text" required></textarea><br>
+                    Recommend? <input name="recommended" type="checkbox">
+                    <button>Rate</button>
+                </form>
+                <div id="movieContainer">
+                <div id="movieInfo">
+                    <span class="tag"><i>Title:</i></span> <%= movie.Title %><br>
+                    <span class="tag"><i>Year:</i></span> <%= movie.Year %><br>
+                    <span class="tag"><i>Plot:</i></span> <%= movie.Plot %><br>
+                </div>
+                <div id="posterBox">
+                    <img id="poster" src="<%= movie.Poster %>"><br>
+                </div>
+                </div><br>
+                <% } %>
+                    <% } %>
+        <%- include("partials/footer.ejs")  %>
+
+</body>
+</html>
